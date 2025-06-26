@@ -1,0 +1,8 @@
+#cloud-config
+write_files:
+  - path: /etc/resolv.conf
+    content: |
+      nameserver 10.0.2.4
+      search localdomain
+runcmd:
+  - systemctl restart systemd-resolved || true

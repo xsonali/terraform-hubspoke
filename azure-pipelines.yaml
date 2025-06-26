@@ -1,0 +1,58 @@
+trigger:
+  branches:
+    include:
+      - main  # Adjust if using another branch
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+- group: terraform-hubspoke-grp
+- name: TF_VERSION
+  value: '1.6.6'
+- name: backendServiceArm
+  value: 'terraform-hubspoke-connection'  # Azure service connection name
+- name: azureSubscription
+  value: 'terraform-hubspoke-connection'  # Same as above, used for AzureCLI task
+- name: environment
+  value: 'dev'  # Optional environment name
+
+steps:
+- task: UseTerraform@0
+  inputs:
+    terraformVersion: $(TF_VERSION)
+
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: $(azureSubscription)
+    scriptType: bash
+    scriptLocation: inlineScript
+    inlineScript: |
+      echo "##[section]Logging in to Azure..."
+      az account show
+
+- task: TerraformTaskV4@4
+  displayName: 'Terraform Init'
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
+    backendServiceArm: $(backendServiceArm)
+    backendAzureRmResourceGroupName: 'PTutorial'          # Replace with your backend RG
+    backendAzureRmStorageAccountName: 'ptutorial123'      # Replace with your storage account
+    backendAzureRmContainerName: 'ptstate'
+    backendAzureRmKey: 'terraform.tfstate'
+
+- task: TerraformTaskV4@4
+  displayName: 'Terraform Plan'
+  inputs:
+    provider: 'azurerm'
+    command: 'plan'
+    backendServiceArm: $(backendServiceArm)
+
+- task: TerraformTaskV4@4
+  displayName: 'Terraform Apply'
+  inputs:
+    provider: 'azurerm'
+    command: 'apply'
+    backendServiceArm: $(backendServiceArm)
+    args: '-auto-approve'

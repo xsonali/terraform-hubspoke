@@ -1,0 +1,7 @@
+echo ".terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+override.tf
+.vscode/
+.idea/" > .gitignore

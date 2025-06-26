@@ -1,0 +1,6 @@
+# terraform.tfvars
+# Assign values to variables declared in variables.tf.
+admin_password = "$Tangpore0321x"
+location       = "australiaeast"
+admin_username = "azureadmin"
+vm_size        = "Standard_B2ms"
