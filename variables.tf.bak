@@ -23,7 +23,7 @@ variable "admin_password" {
 variable "vm_size" {
   description = "Size of the virtual machines"
   type        = string
-  default     = "Standard_B1s"
+  default     = "Standard_B2ms"
 }
 
 variable "public_cert_root" {
