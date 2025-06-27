@@ -1,0 +1,20 @@
+resource "azurerm_dns_zone" "austraweb_zone" {
+  name                = "austraweb.com"
+  resource_group_name = azurerm_resource_group.rg.name
+}
+
+resource "azurerm_dns_a_record" "root" {
+  name                = "@"  # Root domain
+  zone_name           = azurerm_dns_zone.austraweb_zone.name
+  resource_group_name = azurerm_resource_group.rg.name
+  ttl                 = 300
+  records             = ["20.191.247.205"]
+}
+
+resource "azurerm_dns_a_record" "www" {
+  name                = "www" # www subdomain
+  zone_name           = azurerm_dns_zone.austraweb_zone.name
+  resource_group_name = azurerm_resource_group.rg.name
+  ttl                 = 300
+  records             = ["20.191.247.205"]
+}

@@ -1,5 +1,6 @@
 # main.tf
 # Entry point to reference other modules or resources.
+# main.tf
 
 terraform {
   required_version = ">= 1.0.0"

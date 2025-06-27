@@ -26,6 +26,12 @@ variable "vm_size" {
   default     = "Standard_B1s"
 }
 
+variable "firewall_private_ip" {
+  description = "Private IP of Azure Firewall in the hub"
+  type        = string
+  default     = "10.0.0.4"
+}
+
 variable "public_cert_root" {
   description = "Public Certificate"
   type        = string

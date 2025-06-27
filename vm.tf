@@ -1,4 +1,4 @@
-# Public IP for the Web VM (not attached to NIC)
+# Public IP for the Web VM 
 resource "azurerm_public_ip" "web_vm_pip" {
   name                = "pip-web-vm-1"
   location            = var.location
@@ -58,7 +58,7 @@ resource "azurerm_network_interface" "web_vm_nic" {
     name                          = "ipconfig1"
     subnet_id                     = azurerm_subnet.dmz_subnet.id
     private_ip_address_allocation = "Dynamic"
-    # public_ip_address_id omitted intentionally — handled by firewall DNAT
+    public_ip_address_id          = azurerm_public_ip.web_vm_pip.id
   }
 }
 
@@ -70,8 +70,8 @@ resource "azurerm_linux_virtual_machine" "web_vm_1" {
   size                            = var.vm_size
   network_interface_ids           = [azurerm_network_interface.web_vm_nic.id]
   admin_username                  = var.admin_username
-  admin_password                  = var.admin_password
-  disable_password_authentication = false
+  #admin_password                  = var.admin_password
+  disable_password_authentication = true
 
   os_disk {
     name                 = "osdisk-web-vm-1"
@@ -84,6 +84,11 @@ resource "azurerm_linux_virtual_machine" "web_vm_1" {
     offer     = "0001-com-ubuntu-server-focal"
     sku       = "20_04-lts"
     version   = "latest"
+  }
+  
+  admin_ssh_key {
+  username   = var.admin_username
+  public_key = file("C:/Users/Alam/.ssh/azure_id_rsa.pub")
   }
 
   custom_data = filebase64("${path.module}/cloud-init-dns.yaml")

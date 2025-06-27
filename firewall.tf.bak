@@ -43,7 +43,7 @@ resource "azurerm_firewall_nat_rule_collection" "rdp_nat_rule" {
   }
 }
 
-# SSH rule to Linux Web VM
+# NAT Rule Collection: SSH to Linux Web VM
 resource "azurerm_firewall_nat_rule_collection" "linux_ssh_nat_rule" {
   name                = "linux-ssh"
   azure_firewall_name = azurerm_firewall.firewall.name
