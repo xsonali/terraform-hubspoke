@@ -64,13 +64,13 @@ resource "azurerm_network_interface" "web_vm_nic" {
 
 # Linux Web Virtual Machine
 resource "azurerm_linux_virtual_machine" "web_vm_1" {
-  name                  = "web-vm-1"
-  location              = var.location
-  resource_group_name   = azurerm_resource_group.rg.name
-  size                  = var.vm_size
-  network_interface_ids = [azurerm_network_interface.web_vm_nic.id]
-  admin_username        = var.admin_username
-  admin_password        = var.admin_password
+  name                            = "web-vm-1"
+  location                        = var.location
+  resource_group_name             = azurerm_resource_group.rg.name
+  size                            = var.vm_size
+  network_interface_ids           = [azurerm_network_interface.web_vm_nic.id]
+  admin_username                  = var.admin_username
+  admin_password                  = var.admin_password
   disable_password_authentication = true
 
   os_disk {
