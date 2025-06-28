@@ -12,26 +12,24 @@ variables:
     value: '1.6.6'
   - name: backendServiceArm
     value: 'terraform-hubspoke-connection'
-  - name: azureSubscription
-    value: 'terraform-hubspoke-connection'
 
 steps:
-# Install Terraform (Jason Johnson's extension)
+# Install specified Terraform version (Jason Johnson's extension)
 - task: JasonBJohnson.azure-pipelines-tasks-terraform.terraform-installer.TerraformInstaller@1
   inputs:
     terraformVersion: $(TF_VERSION)
 
-# Azure Login
+# Azure CLI login verification
 - task: AzureCLI@2
   inputs:
-    azureSubscription: $(azureSubscription)
+    azureSubscription: $(backendServiceArm)
     scriptType: bash
     scriptLocation: inlineScript
     inlineScript: |
       echo "##[section]Verifying Azure CLI authentication..."
       az account show
 
-# Terraform Init (Jason Johnson's extension)
+# Terraform Init with backend configuration
 - task: JasonBJohnson.azure-pipelines-tasks-terraform.terraform-task.TerraformTask@4
   displayName: 'Terraform Init'
   inputs:
@@ -43,19 +41,19 @@ steps:
     backendAzureRmContainerName: 'ptstate'
     backendAzureRmKey: 'terraform.tfstate'
 
-# Terraform Plan (Jason Johnson's extension)
+# Terraform Plan
 - task: JasonBJohnson.azure-pipelines-tasks-terraform.terraform-task.TerraformTask@4
   displayName: 'Terraform Plan'
   inputs:
     provider: 'azurerm'
     command: 'plan'
-    environmentServiceNameAzureRM: $(backendServiceArm)
+    backendServiceArm: $(backendServiceArm)
 
-# Terraform Apply (Jason Johnson's extension)
+# Terraform Apply with auto-approve
 - task: JasonBJohnson.azure-pipelines-tasks-terraform.terraform-task.TerraformTask@4
   displayName: 'Terraform Apply'
   inputs:
     provider: 'azurerm'
     command: 'apply'
-    environmentServiceNameAzureRM: $(backendServiceArm)
+    backendServiceArm: $(backendServiceArm)
     args: '-auto-approve'
