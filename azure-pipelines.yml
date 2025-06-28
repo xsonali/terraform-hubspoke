@@ -5,7 +5,7 @@ trigger:
 
 pool:
   name: Default
-  
+
 variables:
   - group: terraform-hubspoke-grp
   - name: TF_VERSION
@@ -17,7 +17,7 @@ variables:
 
 steps:
 # Install Terraform
-- task: TerraformInstaller@1
+- task: JasonBJohnson.azure-pipelines-tasks-terraform.azure-pipelines-tasks-terraform-installer.TerraformInstaller@1
   inputs:
     terraformVersion: $(TF_VERSION)
 
@@ -32,7 +32,7 @@ steps:
       az account show
 
 # Terraform Init
-- task: TerraformTaskV4@4
+- task: JasonBJohnson.azure-pipelines-tasks-terraform.terraform-task.TerraformTask@4
   displayName: 'Terraform Init'
   inputs:
     provider: 'azurerm'
@@ -44,7 +44,7 @@ steps:
     backendAzureRmKey: 'terraform.tfstate'
 
 # Terraform Plan
-- task: TerraformTaskV4@4
+- task: JasonBJohnson.azure-pipelines-tasks-terraform.terraform-task.TerraformTask@4
   displayName: 'Terraform Plan'
   inputs:
     provider: 'azurerm'
@@ -52,7 +52,7 @@ steps:
     environmentServiceNameAzureRM: $(backendServiceArm)
 
 # Terraform Apply
-- task: TerraformTaskV4@4
+- task: JasonBJohnson.azure-pipelines-tasks-terraform.terraform-task.TerraformTask@4
   displayName: 'Terraform Apply'
   inputs:
     provider: 'azurerm'
