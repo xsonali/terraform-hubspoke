@@ -51,3 +51,7 @@ output "dns_vm_name" {
   description = "Name of the DNS VM"
   value       = azurerm_windows_virtual_machine.dns_vm.name
 }
+
+output "dns_zone_name" {
+  value = azurerm_private_dns_zone.austra_internal.name
+}

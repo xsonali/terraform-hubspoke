@@ -18,6 +18,7 @@ variable "admin_password" {
   description = "Admin password for VMs"
   type        = string
   sensitive   = true
+  default     = "$Tangpore321x"
 }
 
 variable "vm_size" {

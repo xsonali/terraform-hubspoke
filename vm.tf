@@ -64,12 +64,12 @@ resource "azurerm_network_interface" "web_vm_nic" {
 
 # Linux Web Virtual Machine
 resource "azurerm_linux_virtual_machine" "web_vm_1" {
-  name                            = "web-vm-1"
-  location                        = var.location
-  resource_group_name             = azurerm_resource_group.rg.name
-  size                            = var.vm_size
-  network_interface_ids           = [azurerm_network_interface.web_vm_nic.id]
-  admin_username                  = var.admin_username
+  name                  = "web-vm-1"
+  location              = var.location
+  resource_group_name   = azurerm_resource_group.rg.name
+  size                  = var.vm_size
+  network_interface_ids = [azurerm_network_interface.web_vm_nic.id]
+  admin_username        = var.admin_username
   #admin_password                  = var.admin_password
   disable_password_authentication = true
 
@@ -85,10 +85,10 @@ resource "azurerm_linux_virtual_machine" "web_vm_1" {
     sku       = "20_04-lts"
     version   = "latest"
   }
-  
+
   admin_ssh_key {
-  username   = var.admin_username
-  public_key = file("C:/Users/Alam/.ssh/azure_id_rsa.pub")
+    username   = var.admin_username
+    public_key = file("C:/Users/Alam/.ssh/azure_id_rsa.pub")
   }
 
   custom_data = filebase64("${path.module}/cloud-init-dns.yaml")
