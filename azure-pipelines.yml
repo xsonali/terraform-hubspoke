@@ -4,6 +4,7 @@ trigger:
       - main  # Adjust if your default branch is different
 
 pool:
+  name: Default
   vmImage: 'ubuntu-latest'
 
 variables:
