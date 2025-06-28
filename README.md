@@ -1,7 +1,10 @@
 Terraform Hub-Spoke Architecture on Azure
-This project provisions a Hub-and-Spoke network topology on Microsoft Azure using Terraform and deploys it via Azure DevOps pipelines. It is designed for learning, experimentation, and demonstrating Infrastructure as Code (IaC) with remote backend state management and CI/CD automation.
-📁 Project Structure
+=========================================
 
+This project provisions a Hub-and-Spoke network topology on Microsoft Azure using Terraform, with deployment through Azure DevOps pipelines. It’s designed for learning, experimentation, and showcasing Infrastructure as Code (IaC) with remote backend state management and CI/CD automation.
+
+📁 Project Structure
+--------------------
 terraform-hubspoke/
 ├── main.tf                # Core infrastructure setup
 ├── variables.tf           # Input variables
@@ -19,39 +22,51 @@ terraform-hubspoke/
 └── README.md
 
 🧰 Features
-•	🏗️ Hub-and-Spoke Network with centralized routing
-•	🛡️ NSG and Firewall rules for network control
-•	🖥️ Linux/Windows VM deployment with cloud-init support
-•	🌐 DNS zone and A records for custom domains
-•	🔐 Azure DevOps CI/CD Pipeline for automated deployment
-•	📦 Remote state management via Azure Blob Storage
-🚀 Getting Started
-✅ Prerequisites
-•	Azure Subscription
-•	Terraform CLI installed
-•	Azure DevOps project
-•	A Service Connection in Azure DevOps (SP with Contributor or Owner access)
-•	Storage account for remote backend state
-🏁 Deployment Steps
-1.	Clone the repository
-git clone https://github.com/your-username/terraform-hubspoke.git
-cd terraform-hubspoke
-2.	Configure variables
-Create a terraform.tfvars file:
+-----------
+• 🏗️ Hub-and-Spoke Network with centralized routing
+• 🛡️ NSG and Firewall rules for traffic control
+• 🖥️ Automated Linux/Windows VM deployment (with cloud-init)
+• 🌐 Azure DNS zone and A record creation
+• 🔄 Remote state management using Azure Blob Storage
+• 🤖 CI/CD pipeline using Azure DevOps
 
-location       = "australiaeast"
-admin_username = "azureuser"
-admin_password = "………..!"
-3.	Run Terraform locally (optional)
-terraform init
-terraform plan
-terraform apply
-4.	Use Azure DevOps Pipeline
-Commit your changes and push to the main branch. The pipeline in azure-pipelines.yml will run automatically.
+🚀 Getting Started
+------------------
+✅ Prerequisites
+• Azure Subscription
+• Terraform CLI installed
+• Azure DevOps Project
+• Service Connection (SP with Contributor or Owner access)
+• Azure Storage Account for remote backend
+
+🏁 Deployment Steps
+-------------------
+1. Clone the Repository
+   git clone https://github.com/your-username/terraform-hubspoke.git
+   cd terraform-hubspoke
+
+2. Create terraform.tfvars file:
+   location       = "australiaeast"
+   admin_username = "azureuser"
+   admin_password = "YourSecurePassword123!"
+
+3. Run Terraform Locally (Optional)
+   terraform init
+   terraform plan
+   terraform apply
+
+4. CI/CD via Azure DevOps
+   Push changes to main branch. Pipeline in azure-pipelines.yml triggers automatically.
+
 🔐 Security
-Sensitive variables like admin_password are stored securely in Azure DevOps Variable Groups. The .terraform/ directory and .tfvars are excluded via .gitignore.
+-----------
+• Sensitive variables like admin_password stored in Azure DevOps Variable Groups.
+• .terraform/ and .tfvars excluded via .gitignore.
+
 📫 Contact
-For any questions or contributions, feel free to reach out via GitHub Issues:
-https://github.com/your-username/terraform-hubspoke/issues
+----------
+Open an issue: https://github.com/your-username/terraform-hubspoke/issues
+
 📝 License
+----------
 This project is licensed under the MIT License.
