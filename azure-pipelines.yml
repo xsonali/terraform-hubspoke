@@ -7,10 +7,13 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  - group: terraform-hubspoke-grp   # Ensure this group contains a secret variable named `admin_password`
-  TF_VERSION: '1.6.6'
-  backendServiceArm: 'terraform-hubspoke-connection'
-  azureSubscription: 'terraform-hubspoke-connection'
+  - group: terraform-hubspoke-grp
+  - name: TF_VERSION
+    value: '1.6.6'
+  - name: backendServiceArm
+    value: 'terraform-hubspoke-connection'
+  - name: azureSubscription
+    value: 'terraform-hubspoke-connection'
 
 steps:
 # Install Terraform
@@ -35,12 +38,10 @@ steps:
     provider: 'azurerm'
     command: 'init'
     backendServiceArm: $(backendServiceArm)
-    backendAzureRmResourceGroupName: 'PTutorial'           # Replace with your backend RG name
-    backendAzureRmStorageAccountName: 'ptutorial123'       # Replace with your backend storage account
+    backendAzureRmResourceGroupName: 'PTutorial-rg'           # ✅ replace with correct backend RG
+    backendAzureRmStorageAccountName: 'ptutorial123'          # ✅ replace with correct storage account
     backendAzureRmContainerName: 'ptstate'
     backendAzureRmKey: 'terraform.tfstate'
-  env:
-    TF_VAR_admin_password: $(admin_password)
 
 # Terraform Plan
 - task: TerraformTaskV4@4
@@ -49,8 +50,6 @@ steps:
     provider: 'azurerm'
     command: 'plan'
     environmentServiceNameAzureRM: $(backendServiceArm)
-  env:
-    TF_VAR_admin_password: $(admin_password)
 
 # Terraform Apply
 - task: TerraformTaskV4@4
@@ -60,5 +59,3 @@ steps:
     command: 'apply'
     environmentServiceNameAzureRM: $(backendServiceArm)
     args: '-auto-approve'
-  env:
-    TF_VAR_admin_password: $(admin_password)
