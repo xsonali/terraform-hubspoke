@@ -41,7 +41,7 @@ Create a terraform.tfvars file:
 
 location       = "australiaeast"
 admin_username = "azureuser"
-admin_password = "P@ssw0rd123!"
+admin_password = "………..!"
 3.	Run Terraform locally (optional)
 terraform init
 terraform plan
