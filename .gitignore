@@ -1,8 +1,12 @@
 .terraform/
 *.tfstate
 *.tfstate.backup
-*.tfvars
 override.tf
 .vscode/
 .idea/
+*.tfvars
+*.bak
+*.bak
+
+
 
