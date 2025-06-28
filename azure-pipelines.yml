@@ -5,8 +5,7 @@ trigger:
 
 pool:
   name: Default
-  vmImage: 'ubuntu-latest'
-
+  
 variables:
   - group: terraform-hubspoke-grp
   - name: TF_VERSION
