@@ -18,6 +18,7 @@ steps:
 - task: TerraformInstaller@0
   inputs:
     terraformVersion: $(TF_VERSION)
+
 # Terraform Init
 - task: TerraformCLI@0
   displayName: 'Terraform Init'
@@ -29,9 +30,9 @@ steps:
     backendAzureRmStorageAccountName: 'ptutorial123'
     backendAzureRmContainerName: 'ptstate'
     backendAzureRmKey: 'terraform.tfstate'
-    workingDirectory: '.'
+    workingDirectory: '.'  # Adjust if your .tf files are in a subfolder
 
-# Terraform Plan (save to file)
+# Terraform Plan
 - task: TerraformCLI@0
   displayName: 'Terraform Plan'
   inputs:
@@ -41,7 +42,7 @@ steps:
     workingDirectory: '.'
     args: '-out=tfplan'
 
-# Publish the plan file
+# Publish the plan file (optional)
 - task: PublishPipelineArtifact@1
   displayName: 'Publish Terraform Plan Artifact'
   inputs:
@@ -49,7 +50,7 @@ steps:
     artifact: 'tfplan'
     publishLocation: 'pipeline'
 
-# Terraform Apply (use tfplan)
+# Terraform Apply
 - task: TerraformCLI@0
   displayName: 'Terraform Apply'
   inputs:
