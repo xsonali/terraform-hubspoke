@@ -1,6 +1,5 @@
 # vpn.tf
 # Define VPN Gateway and related configuration here.
-# vpn.tf
 
 # VPN Gateway Public IP
 resource "azurerm_public_ip" "vpngw_pip" {
@@ -30,10 +29,5 @@ resource "azurerm_virtual_network_gateway" "vpngw" {
 
   vpn_client_configuration {
     address_space = ["192.168.1.0/24"]
-
-    root_certificate {
-      name             = "P2SRoot"
-      public_cert_data = var.public_cert_root
-    }
   }
 }

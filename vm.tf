@@ -70,7 +70,7 @@ resource "azurerm_linux_virtual_machine" "web_vm_1" {
   size                  = var.vm_size
   network_interface_ids = [azurerm_network_interface.web_vm_nic.id]
   admin_username        = var.admin_username
-  #admin_password                  = var.admin_password
+  admin_password                  = var.admin_password
   disable_password_authentication = true
 
   os_disk {
