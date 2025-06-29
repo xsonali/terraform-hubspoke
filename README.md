@@ -78,10 +78,11 @@ Deployment Steps
 5. CI/CD via Azure DevOps
    Push changes to main branch. Pipeline in azure-pipelines.yml triggers automatically.
 
-Security
------------
-• Sensitive variables like admin_password stored in Azure DevOps Variable Groups.
-• .terraform/ and .tfvars excluded via .gitignore.
+### Security
+
+* Sensitive variables such as `admin_password` are securely managed using Azure DevOps Variable Groups
+* `.terraform/` and `.tfvars` files are excluded from version control via `.gitignore` to avoid exposing sensitive or stateful data
+* The infrastructure codebase is organized into segmented and modular `.tf` files, promoting clarity, easier troubleshooting, and maintainability
 
 Contact
 ----------
