@@ -34,6 +34,7 @@ Features
 Getting Started
 ------------------
 ✅ **Prerequisites**
+
 • Azure Subscription
 • Terraform CLI installed
 • Azure DevOps Project
