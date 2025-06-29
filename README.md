@@ -53,7 +53,7 @@ Getting Started
 Deployment Steps
 -------------------
 1. Clone the Repository
-   git clone https://github.com/your-username/terraform-hubspoke.git
+   git clone https://github.com/your-username/terraform-hubspoke.git (Ensure you replace your-username with the actual username)
    cd terraform-hubspoke
 
 2. Create terraform.tfvars file:
