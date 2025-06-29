@@ -59,6 +59,8 @@ Deployment Steps
    
    cd terraform-hubspoke (Enter)
 
+   PS C:\Users\Alam\Desktop\terraform-hubspoke>
+
 3. Create terraform.tfvars file:
    location       = "australiaeast"
    admin_username = "azureuser"
