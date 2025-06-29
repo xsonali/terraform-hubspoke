@@ -3,10 +3,16 @@
 package_update: true
 
 write_files:
+  - path: /etc/sysctl.d/99-ipforward.conf
+    content: |
+      net.ipv4.ip_forward = 1
+
   - path: /etc/resolv.conf
     content: |
       nameserver 10.0.2.4
       search localdomain
 
 runcmd:
+  - sysctl --system
   - systemctl restart systemd-resolved || true
+  - iptables -P FORWARD ACCEPT
