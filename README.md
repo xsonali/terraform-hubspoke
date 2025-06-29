@@ -88,6 +88,8 @@ Contact
 ----------
 Open an issue: https://github.com/your-username/terraform-hubspoke/issues
 
+Email: villshona@gmail.com
+
 Image
 ----------
 
