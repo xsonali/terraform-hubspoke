@@ -69,7 +69,9 @@ Open an issue: https://github.com/your-username/terraform-hubspoke/issues
 
 Image
 ----------
-The IP address either private or public may not be the same as the illustratin.
+Here’s a polished version combining your sentence smoothly:
+
+**The IP addresses, whether private or public, may differ from those shown in the illustration; this information is provided without prejudice.**
 
 ![image](https://github.com/user-attachments/assets/61591c88-9b03-422b-b953-ed4202cc9ae1)
 ![image](https://github.com/user-attachments/assets/84929eba-2567-40dd-a49b-915e98cc4cb0)
