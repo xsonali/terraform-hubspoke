@@ -1,7 +1,7 @@
 Terraform Hub-Spoke Architecture on Azure
 =========================================
 
-This project provisions a Hub-and-Spoke network topology on Microsoft Azure using Terraform, with deployment through Azure DevOps pipelines. It’s designed for learning, experimentation, and showcasing Infrastructure as Code (IaC) with remote backend state management and CI/CD automation.
+This project provisions a Hub-and-Spoke network topology on Microsoft Azure using Terraform, with deployment through Azure DevOps pipelines; it is production-quality and designed for learning, experimentation, and showcasing Infrastructure as Code (IaC) with remote backend state management and CI/CD automation.
 
 Project Structure
 --------------------
