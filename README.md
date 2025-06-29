@@ -54,19 +54,20 @@ Deployment Steps
 -------------------
 1. Clone the Repository
    git clone https://github.com/your-username/terraform-hubspoke.git (Ensure you replace your-username with the actual username)
+   
    cd terraform-hubspoke
 
-2. Create terraform.tfvars file:
+3. Create terraform.tfvars file:
    location       = "australiaeast"
    admin_username = "azureuser"
    admin_password = "YourSecurePassword123!"
 
-3. Run Terraform Locally (Optional)
+4. Run Terraform Locally (Optional)
    terraform init
    terraform plan
    terraform apply
 
-4. CI/CD via Azure DevOps
+5. CI/CD via Azure DevOps
    Push changes to main branch. Pipeline in azure-pipelines.yml triggers automatically.
 
 Security
