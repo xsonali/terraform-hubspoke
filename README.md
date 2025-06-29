@@ -69,7 +69,8 @@ Open an issue: https://github.com/your-username/terraform-hubspoke/issues
 
 Image
 ----------
-![image](https://github.com/user-attachments/assets/b73ffb5b-6e26-4e18-92ed-2e3cc2ddc0b4) ![image](https://github.com/user-attachments/assets/7782e57a-78ed-4f9d-962e-c53396a09066)
+![image](https://github.com/user-attachments/assets/61591c88-9b03-422b-b953-ed4202cc9ae1)
+ ![image](https://github.com/user-attachments/assets/7782e57a-78ed-4f9d-962e-c53396a09066)
 
 
 
