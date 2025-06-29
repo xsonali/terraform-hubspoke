@@ -27,7 +27,8 @@ variable "vm_size" {
 }
 
 variable "firewall_private_ip" {
-  description = "Private IP of Azure Firewall in the hub"
+  description = "Private IP of the virtual appliance acting as next hop"
   type        = string
-  default     = "10.0.0.4"
+  default     = "10.0.2.10"
 }
+
