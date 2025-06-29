@@ -12,7 +12,7 @@ terraform-hubspoke/
 ├── backend.tf # Remote backend configuration
 ├── vm.tf # Linux/Windows VM configuration
 ├── nsg.tf # Network Security Groups
-├── dns.tf # DNS zone and A records
+├── dns.tf # Private DNS zone, DNS Zone and A records
 ├── route_table.tf # Custom route tables
 ├── monitor.tf # Monitoring and diagnostics
 ├── vpn.tf # VPN Gateway setup
