@@ -24,7 +24,7 @@ terraform-hubspoke/
 
 Features
 -----------
-• Hub-and-Spoke Network with centralized routing
+• Hub-and-Spoke network architecture with centralized routing, traffic and private DNS management, and enhanced security posture
 • NSG and Firewall rules for traffic control
 • Automated Linux/Windows VM deployment (with cloud-init)
 • Azure DNS zone and A record creation
