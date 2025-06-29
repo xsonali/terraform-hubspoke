@@ -6,7 +6,7 @@ This project provisions a Hub-and-Spoke network topology on Microsoft Azure usin
 Project Structure
 --------------------
 terraform-hubspoke/
-├── main.tf                # Core infrastructure setup
+├── main.tf                # Terraform,the provider, and the resource group
 ├── variables.tf           # Input variables
 ├── outputs.tf             # Output values
 ├── backend.tf             # Remote backend configuration
