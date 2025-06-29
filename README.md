@@ -6,20 +6,21 @@ This project provisions a Hub-and-Spoke network topology on Microsoft Azure usin
 Project Structure
 --------------------
 terraform-hubspoke/
-├── main.tf                # Terraform,the provider, and the resource group
-├── variables.tf           # Input variables
-├── outputs.tf             # Output values
-├── backend.tf             # Remote backend configuration
-├── vm.tf                  # VM configuration
-├── nsg.tf                 # Network security groups
-├── dns.tf                 # DNS Zone and A records
-├── route_table.tf         # Route tables
-├── monitor.tf             # Monitoring configuration
-├── vpn.tf                 # VPN Gateway setup
-├── firewall.tf            # Azure Firewall deployment
-├── azure-pipelines.yml    # Azure DevOps CI/CD pipeline
-├── .gitignore
-└── README.md
+├── main.tf # Provider and resource group
+├── variables.tf # Input variables
+├── outputs.tf # Output values
+├── backend.tf # Remote backend configuration
+├── vm.tf # Linux/Windows VM configuration
+├── nsg.tf # Network Security Groups
+├── dns.tf # DNS zone and A records
+├── route_table.tf # Custom route tables
+├── monitor.tf # Monitoring and diagnostics
+├── vpn.tf # VPN Gateway setup
+├── firewall.tf # Azure Firewall deployment
+├── cloud-init-dns.yaml # Cloud-init configuration for DNS VM
+├── azure-pipelines.yml # Azure DevOps CI/CD pipeline definition
+├── .gitignore # Git ignored files
+└── README.md # Project documentation
 
 Features
 -----------
