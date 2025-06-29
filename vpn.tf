@@ -26,9 +26,9 @@ resource "azurerm_virtual_network_gateway" "vpngw" {
   }
 
   enable_bgp = false
-    
+
   vpn_client_configuration {
-  address_space = ["192.168.1.0/24"]
-  # no root_certificate block here
+    address_space = ["192.168.1.0/24"]
+    # no root_certificate block here
   }
 }

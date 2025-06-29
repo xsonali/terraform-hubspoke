@@ -25,18 +25,10 @@ resource "azurerm_route_table" "gateway_to_spoke" {
 
   route {
     name                   = "spoke-via-nva"
-    address_prefix         = "10.1.0.0/24"  # Adjust as needed
+    address_prefix         = "10.1.0.0/24" # Adjust as needed
     next_hop_type          = "VirtualAppliance"
     next_hop_in_ip_address = var.firewall_private_ip
   }
-}
-
-# GatewaySubnet definition 
-resource "azurerm_subnet" "gateway_subnet" {
-  name                 = "GatewaySubnet"
-  resource_group_name  = azurerm_resource_group.rg.name
-  virtual_network_name = azurerm_virtual_network.hub.name
-  address_prefixes     = ["10.0.0.0/27"]
 }
 
 # Associate the route table with the GatewaySubnet
