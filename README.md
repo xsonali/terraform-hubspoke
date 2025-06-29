@@ -53,7 +53,7 @@ Getting Started
 Deployment Steps
 -------------------
 
-> It requires step-by-step setup of the development environment — not difficult, but it does require patience and practive.
+> It requires step-by-step setup of the development environment — not difficult, but it does require patience and practice.
 
 
 1. Clone the Repository
