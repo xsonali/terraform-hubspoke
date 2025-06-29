@@ -54,7 +54,10 @@ Getting Started
 Deployment Steps
 -------------------
 
-> It requires step-by-step setup of the development environment — not difficult, but it does require patience and practice.
+> Setting up the development environment is a step-by-step process — not overly complex, but it does require patience, a solid understanding of Azure cloud architecture, and practical experience.
+
+Let me know if you'd like a more technical or concise version!
+
 
 
 1. Clone the Repository
