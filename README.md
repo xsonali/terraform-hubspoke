@@ -17,7 +17,7 @@ terraform-hubspoke/
 ├── monitor.tf # Monitoring and diagnostics
 ├── vpn.tf # VPN Gateway setup
 ├── firewall.tf # Azure Firewall deployment
-├── cloud-init-dns.yaml # Cloud-init configuration for DNS VM
+├── cloud-init-dns.yaml # Cloud-init configuration for DNS VM and Apache2
 ├── azure-pipelines.yml # Azure DevOps CI/CD pipeline definition
 ├── .gitignore # Git ignored files
 └── README.md # Project documentation
