@@ -91,7 +91,7 @@ resource "azurerm_linux_virtual_machine" "web_vm_1" {
     public_key = file("C:/Users/Alam/.ssh/azure_id_rsa.pub")
   }
 
-  custom_data = filebase64("${path.module}/cloud-init-webvm.yaml")
+  custom_data = filebase64("${path.module}/cloud-init-dns.yaml")
 
   computer_name              = "webvm1"
   provision_vm_agent         = true
