@@ -33,6 +33,7 @@ terraform-hubspoke/
 • Automated deployment of Linux and Windows VMs using cloud-init
 • Azure DNS zones and A record management for internal and external name resolution
 • Point-to-Site (P2S) VPN connection setup for secure remote access
+• Option to configure Local Network Gateway for Site-to-Site (S2S) VPN connectivity
 • Azure monitoring for centralized diagnostics and insights
 • Remote state management leveraging Azure Blob Storage for Terraform backend
 • Continuous Integration and Continuous Deployment (CI/CD) pipeline implemented via Azure DevOps
