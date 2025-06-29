@@ -47,7 +47,8 @@ Getting Started
 * Azure Storage Account configured for remote backend
 * Service Principal with Contributor or Owner access
 * Service Connection created using the correct Service Principal, scoped to the appropriate folder and Azure DevOps project
-* agent configuration at local desktop
+* agent configuration at local desktop (I have used lower case a instead of A)
+* Avoid storing sensitive information like passwords in .tfvars files committed to the repo; use Azure DevOps Variable Groups instead. 
 
 Deployment Steps
 -------------------
