@@ -69,7 +69,6 @@ Open an issue: https://github.com/your-username/terraform-hubspoke/issues
 
 Image
 ----------
-Here’s a polished version combining your sentence smoothly:
 
 **The IP addresses, whether private or public, may differ from those shown in the illustration; this information is provided without prejudice.**
 
