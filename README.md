@@ -41,13 +41,13 @@ Getting Started
 ------------------
 ✅ **Prerequisites**
 
-• Azure Subscription
-• Terraform CLI installed
-• Azure DevOps Project
-• Azure Storage Account configured for remote backend
-• Service Principal with Contributor or Owner access
-• Service Connection created using the correct Service Principal, scoped to the appropriate folder and Azure DevOps project
-
+* Azure Subscription
+* Terraform CLI installed
+* Azure DevOps Project
+* Azure Storage Account configured for remote backend
+* Service Principal with Contributor or Owner access
+* Service Connection created using the correct Service Principal, scoped to the appropriate folder and Azure DevOps project
+* agent configuration at local desktop
 
 Deployment Steps
 -------------------
