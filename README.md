@@ -52,6 +52,10 @@ Getting Started
 
 Deployment Steps
 -------------------
+
+> It requires step-by-step setup of the development environment — not difficult, but it does require patience and practive.
+
+
 1. Clone the Repository
    git clone https://github.com/your-username/terraform-hubspoke.git (Ensure you replace your-username with the actual username and local directory/folder)
    
