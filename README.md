@@ -24,14 +24,15 @@ terraform-hubspoke/
 ├── .gitignore # Git ignored files
 └── README.md # Project documentation
 
-Features
------------
-• Hub-and-Spoke network architecture with centralized routing, traffic and private DNS management, and enhanced security posture
-• NSG and Firewall rules for traffic control
-• Automated Linux/Windows VM deployment (with cloud-init)
-• Azure DNS zone and A record creation
-• Remote state management using Azure Blob Storage
-• CI/CD pipeline using Azure DevOps
+## **Features**
+
+• Hub-and-Spoke network architecture with centralized routing, traffic management, private DNS, and enhanced security posture
+• Network Security Groups (NSGs) and Azure Firewall rules for comprehensive traffic control
+• Automated deployment of Linux and Windows VMs using cloud-init
+• Azure DNS zones and A record management for internal and external name resolution
+• Point-to-Site (P2S) VPN connection setup for secure remote access
+• Remote state management leveraging Azure Blob Storage for Terraform backend
+• Continuous Integration and Continuous Deployment (CI/CD) pipeline implemented via Azure DevOps
 
 Getting Started
 ------------------
