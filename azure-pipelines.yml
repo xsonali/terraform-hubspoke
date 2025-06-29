@@ -25,7 +25,7 @@ steps:
   inputs:
     command: 'init'
     provider: 'azurerm'
-    backendServiceArm: terraform-hubspoke-connection
+    backendServiceArm: 'terraform-hubspoke-connection'
     backendAzureRmResourceGroupName: 'PTutorial-rg'
     backendAzureRmStorageAccountName: 'ptutorial123'
     backendAzureRmContainerName: 'ptstate'
