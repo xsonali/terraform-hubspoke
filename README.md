@@ -54,11 +54,7 @@ Getting Started
 Deployment Steps
 -------------------
 
-> Setting up the development environment is a step-by-step process — not overly complex, but it does require patience, a solid understanding of Azure cloud architecture, and practical experience.
-
-Let me know if you'd like a more technical or concise version!
-
-
+> Setting up the development environment is a step-by-step process — not overly complex, but it requires patience, a solid understanding of Azure cloud architecture, intelligent network design, and hands-on experience.
 
 1. Clone the Repository
    git clone https://github.com/your-username/terraform-hubspoke.git (Ensure you replace your-username with the actual username and local directory/folder)
