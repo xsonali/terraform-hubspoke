@@ -30,7 +30,7 @@ terraform-hubspoke/
 • Hub-and-Spoke network architecture with centralized routing, traffic management, private DNS, and enhanced security posture
 • VNet peering between Hub and Spoke for seamless and secure cross-network communication
 • Network Security Groups (NSGs) and Azure Firewall rules for comprehensive traffic control
-• Automated deployment of Linux and Windows VMs using cloud-init
+• Automated deployment of Apache2 web server along with configuration of Private DNS Zone for internal name resolution 
 • Azure DNS zones and A record management for internal and external name resolution
 • Point-to-Site (P2S) VPN connection setup for secure remote access
 • Option to configure Local Network Gateway for Site-to-Site (S2S) VPN connectivity
