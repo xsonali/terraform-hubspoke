@@ -81,16 +81,8 @@ Image
 **The IP addresses, whether private or public, may differ from those shown in the illustration; this information is provided without prejudice.**
 
 ![image](https://github.com/user-attachments/assets/ba8a29ba-1ce2-4129-ab68-75f43f8904ba)
-![image](https://github.com/user-attachments/assets/84929eba-2567-40dd-a49b-915e98cc4cb0)
+![image](https://github.com/user-attachments/assets/4040b1d2-2b96-4872-b9ee-116527258388)
 ![image](https://github.com/user-attachments/assets/e6ee7f78-1f3f-4e79-b0f1-250092d44c48)
-
-
-
-
-
-
-
-
 
 📝 License
 ----------
