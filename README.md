@@ -100,7 +100,8 @@ Image
 ![image](https://github.com/user-attachments/assets/e6ee7f78-1f3f-4e79-b0f1-250092d44c48)
 ![image](https://github.com/user-attachments/assets/fdd4a39a-48e6-44b4-9543-1b932750b170)
 
-
+Disclaimer:
+Use this project at your own risk. The author is not responsible for any errors, misconfigurations, data loss, or misunderstandings that may arise from using or modifying this code.
 
 📝 License
 ----------
